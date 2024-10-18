@@ -1,0 +1,9 @@
+@charset 'UTF-8';
+/*
+  Tel
+-----------------------------------------------------*/
+.u-tel {
+  @include mq(tab) {
+    pointer-events: none;
+  }
+}

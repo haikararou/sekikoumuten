@@ -1,0 +1,250 @@
+@charset 'UTF-8';
+/*
+blog
+-----------------------------------------------------*/
+
+//topページ
+.p-blog {
+  position: relative;
+  margin-top: 200px;
+
+  @include mq(lap) {
+    margin-top: 180px;
+  }
+}
+
+.p-blog__wrap {
+  padding-bottom: 55px;
+  padding-right: 6.5vw;
+  padding-left: 6.5vw;
+
+  @include mq(lap) {
+    padding-top: 60px;
+    padding-bottom: 110px;
+    padding-right: 6.5vw;
+    padding-left: 30vw;
+  }
+}
+
+.p-blog__inner {
+  @include mq(lap) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &::after {
+    @include mq(lap) {
+      content: '';
+      display: block;
+      width: 31%;
+    }
+  }
+}
+.p-blog__item {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(lap) {
+    display: block;
+  }
+
+  @include mq(lap) {
+    width: 31%;
+  }
+
+  &:hover {
+    img {
+      @include mq(lap) {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.p-blog__title {
+  margin-left: 3.5vw;
+  position: absolute;
+  top: -100px;
+  left: 0;
+
+  @include mq(tab) {
+    margin-left: 6.5vw;
+  }
+
+  @include mq(lap) {
+    margin-left: 22.5vw;
+    top: 0;
+  }
+}
+
+.p-blog__item + .p-blog__item {
+  padding-top: 30px;
+
+  @include mq(lap) {
+    padding-top: 0;
+  }
+}
+
+.p-blog__thumb {
+  width: 50%;
+  // padding-right: 4%;
+
+  @include mq(lap) {
+    width: 100%;
+    // padding-right: 0;
+  }
+  img {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+  }
+
+  a {
+    padding-right: 10%;
+    display: block;
+    overflow: hidden;
+
+    @include mq(lap) {
+      padding-right: 0;
+    }
+  }
+}
+
+.p-blog__text-area {
+  width: 50%;
+
+  @include mq(lap) {
+    width: 100%;
+  }
+}
+
+.p-blog__date {
+  font-family: $en;
+  font-size: rem(12);
+  line-height: 1.5;
+
+  @include mq(lap) {
+    padding-top: 13px;
+    font-size: rem(20);
+  }
+}
+
+.p-blog__head {
+  font-weight: 500;
+  font-family: $font-set-secondary;
+  letter-spacing: 0;
+  line-height: 1.5;
+  @include mq(lap) {
+    font-size: rem(20);
+  }
+}
+.p-blog__tag {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.p-blog__tag-list {
+  border-radius: 2px;
+  background-color: #f2f2ed;
+  font-family: $en;
+  font-size: rem(10);
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1;
+
+  a {
+    padding: 5px 1em 0;
+    display: block;
+    transition: all 0.3s ease-out;
+
+    @include mq(lap) {
+      padding: 10px 1em 5px;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #76706a;
+    }
+  }
+}
+
+.p-blog__button {
+  margin-top: 35px;
+  text-align: right;
+}
+
+.p-blog__cat {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  margin-top: 35px;
+
+  @include mq(lap) {
+    max-width: 442px;
+    margin: -40px 0 0 auto;
+  }
+}
+
+.p-blog__cat-list {
+  width: 70px;
+  margin-top: 10px;
+
+  @include mq(tab) {
+    width: 100px;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: rem(10);
+    border-right: 1px solid #707070;
+    line-height: 1.5;
+
+    @include mq(lap) {
+      font-size: rem(12);
+    }
+  }
+
+  &:first-child {
+    a {
+      border-left: 1px solid #707070;
+    }
+  }
+}
+
+//blogページ
+.p-sec-blog {
+  .p-blog__wrap {
+    padding: 0;
+    @include mq(lap) {
+      // padding: 0;
+    }
+  }
+  .p-blog__inner {
+    padding-top: 50px;
+
+    @include mq(lap) {
+      padding-top: 10px;
+    }
+  }
+  .p-blog__item {
+    @include mq(lap) {
+      padding-top: 85px;
+    }
+  }
+}
+
+//singleページ
+.single-blog__date {
+  font-size: rem(16);
+}
+.single-blog__title {
+  font-size: rem(20);
+  letter-spacing: 0;
+
+  @include mq(lap) {
+    font-size: rem(30);
+  }
+}

@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+/*
+  Section
+-----------------------------------------------------*/
+.l-section-wrap {
+  width: 87vw;
+  margin: 0 auto;
+  @include mq(lap) {
+    padding-left: 23vw;
+    padding-right: 12vw;
+    width: 100%;
+  }
+}

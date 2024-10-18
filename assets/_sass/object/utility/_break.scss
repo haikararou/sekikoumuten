@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+//====================================
+//  Break
+//====================================
+
+// min-width のとき
+// スマホのみ表示
+.u-sp-only {
+  display: block;
+  @include mq(lap) {
+    display: none;
+  }
+}
+// PCのみ表示
+.u-pc-only {
+  display: none;
+  @include mq(lap) {
+    display: block;
+  }
+}
+
+// inline-block
+.u-inline-b {
+  display: inline-block;
+}

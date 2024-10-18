@@ -1,0 +1,59 @@
+@charset 'UTF-8';
+/*
+  Main
+-----------------------------------------------------*/
+.l-main {
+  overflow: hidden;
+
+  &.-static {
+    overflow: initial;
+  }
+
+  &.-secondary {
+    padding-top: 87px;
+    position: relative;
+
+    @include mq(lap) {
+      padding-top: 260px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../img/common/symbol-r.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: -65px;
+      right: 0;
+      width: spvw(229);
+      height: spvw(161);
+      z-index: -1;
+      pointer-events: none;
+
+      @include mq(tab) {
+        top: -150px;
+      }
+
+      @include mq(lap) {
+        top: -100px;
+        width: rem(512);
+        height: rem(360);
+      }
+    }
+  }
+
+  &.-tertiary {
+    padding-top: 87px;
+    position: relative;
+
+    @include mq(lap) {
+      padding-top: 260px;
+    }
+  }
+
+  &.-lap-topnone {
+    @include mq(lap) {
+      padding-top: 0;
+    }
+  }
+}

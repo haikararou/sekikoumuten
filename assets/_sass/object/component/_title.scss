@@ -1,0 +1,99 @@
+@charset 'UTF-8';
+/*
+  title
+-----------------------------------------------------*/
+
+//トップ
+.c-title {
+  .en {
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: $en;
+    font-size: rem(14);
+    color: #76706a;
+    letter-spacing: 0.1em;
+
+    @include mq(lap) {
+      font-size: rem(16);
+    }
+  }
+
+  .jp {
+    font-size: rem(28);
+    line-height: 1.8;
+
+    @include mq(lap) {
+      line-height: 1.5;
+      font-size: rem(50);
+    }
+  }
+
+  // &.-small {
+  //   .jp {
+  //     @include mq(lap) {
+  //       font-size: rem(40);
+  //       line-height: 1.6;
+  //     }
+  //   }
+  // }
+}
+.c-title-vertical {
+  writing-mode: vertical-rl;
+  font-feature-settings: normal;
+
+  .en {
+    text-transform: uppercase;
+    font-family: $en;
+    font-size: rem(14);
+    color: #76706a;
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+
+    @include mq(lap) {
+      font-size: rem(16);
+    }
+  }
+
+  .jp {
+    font-size: rem(24);
+    margin-right: -9px;
+    letter-spacing: 0.07em;
+
+    @include mq(lap) {
+      font-size: rem(33);
+    }
+  }
+}
+
+//下層
+.c-title-sec {
+  // width: 87vw;
+  // margin: 0 auto;
+
+  // @include mq(lap) {
+  //   width: 100%;
+  //   margin-left: 20vw;
+  // }
+  .en {
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: $en;
+    font-size: rem(14);
+    color: #76706a;
+    letter-spacing: 0.1em;
+
+    @include mq(lap) {
+      font-size: rem(16);
+    }
+  }
+
+  .jp {
+    font-size: rem(30);
+    line-height: 1.8;
+
+    @include mq(lap) {
+      // margin-top: 20px;
+      font-size: rem(50);
+    }
+  }
+}

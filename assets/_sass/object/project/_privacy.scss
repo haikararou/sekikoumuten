@@ -1,0 +1,36 @@
+@charset 'UTF-8';
+/*
+privacy
+-----------------------------------------------------*/
+
+.p-privacy {
+  p {
+    padding-top: 20px;
+
+    @include mq(lap) {
+      padding-top: 40px;
+    }
+  }
+  a {
+    display: block;
+    text-decoration: underline;
+  }
+}
+
+.p-privacy__title {
+  font-weight: 500;
+  font-family: $font-set-secondary;
+  font-size: rem(18);
+
+  @include mq(lap) {
+    font-size: rem(28);
+  }
+
+  &:not(:first-child) {
+    padding-top: 50px;
+
+    @include mq(lap) {
+      padding-top: 100px;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+@charset 'UTF-8';
+/*
+  contact
+-----------------------------------------------------*/
+.c-contact {
+  position: relative;
+  z-index: 2;
+  margin-top: rem(100);
+
+  @include mq(lap) {
+    margin-top: rem(140);
+  }
+}
+
+.c-contact__wrap {
+  margin-left: 25px;
+  background-color: #f2f2ed;
+
+  @include mq(lap) {
+    margin-left: calc(100% - 77%);
+  }
+}
+.c-contact__body {
+  position: relative;
+  padding: rem(32) rem(32) rem(32);
+
+  @include mq(tab) {
+    padding: 80px 80px 40px 40px;
+  }
+  @include mq(lap) {
+    padding: 80px;
+  }
+  @include mq(desk) {
+    padding: 80px 80px 80px 110px;
+  }
+
+  @include mq(vr) {
+    padding: 10% 26% 10% 110px;
+  }
+}
+
+.c-contact__flex {
+  @include mq(tab) {
+    padding-top: 37px;
+  }
+}
+
+.c-contact__title {
+  position: absolute;
+  top: rem(-44);
+  right: spvw(24);
+
+  @include mq(lap) {
+    top: -80px;
+    right: 6.5vw;
+  }
+  @include mq(vr) {
+    right: pcvw(188);
+  }
+}
+
+.c-contact__text {
+  font-weight: 500;
+  font-family: $font-set-secondary;
+
+  @include mq(tab) {
+    font-size: rem(14);
+  }
+}
+
+.c-contact__tel-area {
+  padding-top: rem(25);
+
+  @include mq(tab) {
+    display: flex;
+    align-items: baseline;
+    padding-right: 5%;
+    padding-top: 0;
+  }
+}
+.c-contact__tel-inner {
+  @include mq(tab) {
+    width: 290px;
+  }
+  @include mq(vr) {
+    width: 350px;
+  }
+}
+.c-contact__tel-inner {
+  + .c-contact__tel-inner {
+    margin-top: 20px;
+    @include mq(lap) {
+      margin-top: 0;
+    }
+  }
+}
+.c-contact__tel-head {
+  font-family: $en;
+  font-size: rem(20);
+  line-height: 1;
+
+  @include mq(lap) {
+    display: inline-block;
+    font-size: rem(32);
+    padding-right: 10px;
+  }
+}
+.c-contact__tel {
+  font-family: $en;
+  font-size: rem(35);
+  letter-spacing: 0.08em;
+  margin-top: rem(-18);
+
+  @include mq(lap) {
+    display: inline-block;
+    font-size: rem(46);
+  }
+}
+.c-contact__reception {
+  font-size: rem(12);
+  margin-top: rem(-16);
+  letter-spacing: 0.1em;
+
+  @include mq(lap) {
+    font-size: rem(14);
+    margin-top: rem(-20);
+  }
+}
+.c-contact__btn-area {
+  margin-top: rem(22);
+
+  @include mq(tab) {
+    width: 50%;
+    min-width: 330px;
+    margin-top: 30px;
+  }
+
+  a {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: #fff;
+      background-color: #707070;
+
+      .c-contact__btn-icon {
+        fill: #fff;
+      }
+    }
+  }
+}
+.c-contact__btn {
+  border: 1px solid #707070;
+  width: 100%;
+  display: block;
+  padding: rem(18);
+  text-align: center;
+  font-size: rem(18);
+  font-weight: 500;
+  font-family: $font-set-secondary;
+
+  @include mq(lap) {
+    padding: 20px;
+    font-size: rem(22);
+  }
+}
+
+.c-contact__btn-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-contact__btn-icon {
+  transition: fill 0.2s ease-in-out;
+
+  margin-right: 10px;
+  width: rem(22);
+  fill: #000;
+
+  @include mq(lap) {
+    width: rem(30);
+  }
+}

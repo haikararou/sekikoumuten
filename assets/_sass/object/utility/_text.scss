@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+/*
+  Text
+-----------------------------------------------------*/
+.u-text {
+  &.-center {
+    text-align: center;
+  }
+
+  &.-inline-block {
+    display: inline-block;
+  }
+
+  //2文字目以降がインデント
+  &.-indent {
+    text-indent: -1em;
+    padding-left: 1em;
+  }
+}
+
+.u-en {
+  font-family: $en;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.u-en-light {
+  font-family: $en;
+  font-weight: 300;
+}
+
+.u-uppercase {
+  text-transform: uppercase;
+}
+
+.u-inline-b {
+  display: inline-block;
+}

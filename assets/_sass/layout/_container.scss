@@ -1,0 +1,10 @@
+@charset 'UTF-8';
+/*
+ l-container
+-----------------------------------------------------*/
+
+.l-container {
+  @include mq(lap) {
+    padding-left: 9vw;
+  }
+}

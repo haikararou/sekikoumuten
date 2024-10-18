@@ -1,0 +1,201 @@
+@charset 'UTF-8';
+/*
+  Drawer
+-----------------------------------------------------*/
+
+.c-drawer {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #76706a;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @include mq(lap) {
+    transition: none;
+    pointer-events: auto;
+    opacity: 1;
+    display: block;
+    background-color: initial;
+    position: absolute;
+    width: initial;
+    top: 150px;
+    bottom: initial;
+    left: initial;
+    right: initial;
+    overflow: initial;
+  }
+}
+
+.is-drawerActive .c-drawer {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+  z-index: 2;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url(../img/common/symbol-r.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: rem(495);
+    right: 0;
+    width: spvw(229);
+    height: spvw(161);
+    opacity: 0.4;
+  }
+}
+
+.c-drawer__menu {
+  font-weight: 500;
+  font-family: $font-set-secondary;
+  color: #fff;
+
+  @include mq(lap) {
+    color: $main-text-color;
+  }
+
+  .item {
+    margin-bottom: 1em;
+
+    @include mq(lap) {
+      transition: color 0.3s ease;
+      font-size: rem(15);
+    }
+  }
+  .item:hover {
+    @include mq(lap) {
+      color: #76706a;
+    }
+  }
+
+  .item.-home {
+    @include mq(lap) {
+      display: none;
+    }
+  }
+}
+
+.c-drawer__wrapper {
+  margin: 140px 25px 35px spvw(48);
+
+  @include mq(lap) {
+    margin: 0;
+  }
+}
+
+.c-drawer__footmenu {
+  margin-top: 90px;
+
+  @include mq(lap) {
+    margin-top: 0;
+    position: absolute;
+    bottom: 240px;
+  }
+
+  .menulist {
+    li:hover a {
+      @include mq(lap) {
+        color: #76706a;
+      }
+    }
+    a {
+      font-size: rem(15);
+      color: #fff;
+      font-family: $en;
+      letter-spacing: 0.08em;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+
+      @include mq(lap) {
+        color: #333;
+        font-size: rem(15);
+        transition: color 0.3s ease;
+      }
+    }
+  }
+}
+
+/*
+Hamburger
+-----------------------------------------------------*/
+
+//3本線のハンバーガーボタン
+.c-hamburger {
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.c-hamburger__line {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  background-color: #76706a;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+.c-hamburger__line::before,
+.c-hamburger__line::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  content: '';
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+.c-hamburger__line::before {
+  top: -10px;
+
+  @include mq(lap) {
+    top: -10px;
+  }
+}
+.c-hamburger__line::after {
+  top: 10px;
+
+  @include mq(lap) {
+    top: 10px;
+  }
+}
+
+//メニューオープン時
+.c-hamburger[aria-expanded='true'] .c-hamburger__line {
+  background-color: transparent;
+}
+
+.c-hamburger[aria-expanded='true'] .c-hamburger__line::before,
+.c-hamburger[aria-expanded='true'] .c-hamburger__line::after {
+  top: 0;
+  background-color: #ccc;
+}
+
+.c-hamburger[aria-expanded='true'] .c-hamburger__line::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c-hamburger[aria-expanded='true'] .c-hamburger__line::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

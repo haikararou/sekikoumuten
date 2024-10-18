@@ -1,0 +1,208 @@
+@charset 'UTF-8';
+/*
+  concept
+-----------------------------------------------------*/
+.p-concept__mv {
+  position: relative;
+
+  @include mq(lap) {
+    padding-left: 23vw;
+  }
+  @include mq(desk) {
+    height: 100vh;
+  }
+  .figure {
+    @include mq(lap) {
+      height: 100%;
+    }
+  }
+  img {
+    width: 100%;
+
+    @include mq(lap) {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .copy {
+    font-size: rem(20);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+
+    @include mq(tab) {
+      font-size: rem(34);
+    }
+    @include mq(lap) {
+      padding-left: 23vw;
+    }
+    @include mq(desk) {
+      font-size: rem(51);
+    }
+  }
+}
+
+.p-concept__wrap {
+  width: 87vw;
+  margin: 0 auto;
+
+  @include mq(lap) {
+    width: 100%;
+    padding-left: pcvw(264);
+    padding-right: pcvw(152);
+  }
+
+  p {
+    padding-top: 40px;
+    font-size: rem(15);
+  }
+
+  p + p {
+    padding-top: 1em;
+    @include mq(lap) {
+      padding-top: 3em;
+    }
+  }
+}
+.p-concept__sp {
+  display: block;
+  @include mq(lap) {
+    display: none;
+  }
+}
+.p-concept__pc {
+  display: none;
+  @include mq(lap) {
+    display: block;
+  }
+}
+
+p.p-concept__title {
+  font-family: $en;
+  text-transform: uppercase;
+  font-size: rem(16);
+  padding-top: 30px;
+
+  @include mq(lap) {
+    font-size: rem(15);
+    writing-mode: vertical-rl;
+    padding-right: 37px;
+    padding-top: 50px;
+  }
+}
+.p-concept__pic {
+  padding-top: 40px;
+
+  img {
+    width: 100%;
+
+    @include mq(lap) {
+      width: pcvw(280);
+      max-width: 280px;
+    }
+  }
+
+  @include mq(lap) {
+    &.-pic1 {
+      text-align: right;
+    }
+    &.-pic2 {
+      padding-top: 220px;
+    }
+    &.-pic3 {
+      text-align: right;
+      padding-right: 20px;
+      padding-top: 372px;
+    }
+    &.-pic4 {
+      padding-left: 56px;
+      padding-top: 345px;
+    }
+    &.-pic5 {
+      text-align: right;
+      padding-right: 30px;
+      padding-top: 294px;
+    }
+  }
+}
+
+.p-concept__sticky {
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding-top: 40px;
+  margin-bottom: 200px;
+
+  @include mq(lap) {
+    padding-top: 100px;
+    padding-left: 9.5vw;
+  }
+  @include mq(desk) {
+    padding-top: 40px;
+    padding-left: 18.5vw;
+  }
+}
+.p-concept__sticky-thumb {
+  margin-top: -60vh;
+  padding-bottom: 800px;
+}
+
+p.p-concept__message {
+  font-size: rem(20);
+  padding-top: 100px;
+  @include mq(lap) {
+    padding-top: 100px;
+    padding-bottom: 250px;
+    padding-left: calc(9.5vw + 65px);
+    font-size: rem(30);
+  }
+
+  @include mq(desk) {
+    padding-left: calc(18.5vw + 65px);
+  }
+
+  br {
+    display: block;
+    @include mq(tab) {
+      display: none;
+    }
+  }
+}
+
+.p-concept__stories {
+  @include mq(lap) {
+    padding-left: calc(9.5vw + 65px);
+  }
+
+  @include mq(desk) {
+    padding-left: calc(18.5vw + 65px);
+  }
+  &.p-top-stories__lead {
+    padding-top: 100px;
+    @include mq(lap) {
+      padding-top: 0;
+      width: 90%;
+      margin: initial;
+    }
+  }
+  .p-top-stories__text {
+    padding-top: 20px;
+  }
+
+  .c-title .en {
+    font-size: rem(14);
+    padding-top: 0;
+  }
+  .c-title .jp {
+    font-size: rem(24);
+  }
+  .button {
+    text-align: right;
+  }
+}

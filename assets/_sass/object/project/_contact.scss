@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+/*
+contact
+-----------------------------------------------------*/
+
+.p-contact {
+  .p-form {
+    padding-top: 50px;
+
+    @include mq(lap) {
+      padding-top: 110px;
+    }
+  }
+}
+.p-contact__lead {
+  padding-top: 30px;
+  @include mq(lap) {
+    padding-top: 70px;
+  }
+
+  .p-form__alert {
+    padding-left: 0;
+    font-size: rem(14);
+
+    @include mq(lap) {
+      font-size: rem(16);
+    }
+  }
+}

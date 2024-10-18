@@ -1,0 +1,19 @@
+// 関数の登録
+
+//  font-size rem の計算
+//--------------------------------------------
+$baseFontSize: 16;
+@function rem($pixels) {
+  @return $pixels / $baseFontSize * 1rem;
+}
+
+//  font-size vwの計算
+//--------------------------------------------
+$baseWidth: 375;
+@function spvw($pixelsVw) {
+  @return $pixelsVw / $baseWidth * 100vw;
+}
+$baseWidth-pc: 1568;
+@function pcvw($pixelsVw-pc) {
+  @return $pixelsVw-pc / $baseWidth-pc * 100vw;
+}

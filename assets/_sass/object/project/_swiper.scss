@@ -1,0 +1,71 @@
+@charset 'UTF-8';
+/*
+Swiper
+-----------------------------------------------------*/
+
+// .swiper-container {
+//   height: 100%;
+// }
+
+// .swiper-slide {
+//   img {
+//     width: 100%;
+//   }
+// }
+
+// .swiper-button-prev,
+// .swiper-button-next {
+//   z-index: 1;
+//   font-family: swiper-icons;
+//   font-size: var(--swiper-navigation-size);
+//   text-transform: none !important;
+//   letter-spacing: 0;
+//   text-transform: none;
+//   font-variant: initial;
+//   margin-top: 0;
+
+//   background-image: none;
+//   width: 15px;
+//   height: 15px;
+//   border-top: 2px solid #999999;
+//   border-left: 2px solid #999999;
+// }
+
+// .swiper-button-prev {
+//   transform: translateY(-50%) rotate(315deg);
+// }
+
+// .swiper-button-next {
+//   transform: translateY(-50%) rotate(135deg);
+// }
+
+// .swiper-pagination-bullet {
+//   border: 1px solid #333;
+//   background: transparent;
+//   opacity: inherit;
+//   margin: 0 0.6em;
+//   width: 10px;
+//   height: 10px;
+//   border-radius: initial;
+
+//   @include mq(tab) {
+//     margin: 0 0.9em;
+//     width: 13px;
+//     height: 13px;
+//   }
+// }
+
+// .swiper-pagination-bullet-active {
+//   background-color: #333;
+// }
+
+// .swiper-pagination {
+//   position: static;
+//   width: 100%;
+//   margin: 20px auto 0;
+//   z-index: 0;
+
+//   @include mq(tab) {
+//     margin: 40px auto 0;
+//   }
+// }

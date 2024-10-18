@@ -1,0 +1,113 @@
+@charset 'UTF-8';
+/*
+load
+-----------------------------------------------------*/
+/*MV*/
+
+.load-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 2000;
+  pointer-events: none;
+  background-color: #f2f2f2;
+}
+
+.load-wrapper .load {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.load-conts-wrap {
+  position: relative;
+}
+
+.load-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.load-logo {
+  width: 40%;
+  text-align: center;
+  opacity: 0;
+  animation: loadLogo 2s ease-out 0s forwards;
+
+  @include mq(tab) {
+    width: 320px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+//2回目以降
+.is-repeater .load-wrapper {
+  opacity: 0;
+  display: none;
+}
+
+@keyframes loadLogo {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    filter: blur(0.5rem);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+// テスト
+#loading {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: #f2f2f2;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  pointer-events: none;
+}
+
+.is-load-done {
+  #loading {
+    animation: loading 1s ease forwards;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+//トップの初回アクセス
+.home.is-first {
+  #loading {
+    opacity: 0;
+    display: none;
+  }
+}

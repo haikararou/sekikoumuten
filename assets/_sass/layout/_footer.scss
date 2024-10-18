@@ -1,0 +1,131 @@
+@charset 'UTF-8';
+/*
+  Footer .l-footer
+-----------------------------------------------------*/
+.l-footer {
+  margin-top: rem(-95);
+  background-color: $main-color;
+  padding: rem(135) 25px rem(40);
+  color: #fff;
+
+  @include mq(tab) {
+    padding: rem(135) 25px rem(40) 70px;
+  }
+
+  @include mq(lap) {
+    margin-top: 0;
+    padding: 80px 0px 40px 80px;
+    margin-left: calc(100% - 77%);
+  }
+  @include mq(desk) {
+    padding: 80px 6.5vw 40px 110px;
+  }
+}
+
+.l-footer__inner {
+  @include mq(lap) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.l-footer__add-name {
+  font-size: rem(16);
+
+  @include mq(lap) {
+    font-size: rem(18);
+  }
+}
+.l-footer__add-detail {
+  font-size: rem(13);
+  padding-top: 0.5em;
+
+  @include mq(lap) {
+    font-size: rem(15);
+  }
+}
+
+.l-footer__nav {
+  display: flex;
+  margin-top: rem(55);
+
+  @include mq(lap) {
+    margin-top: 0;
+    min-width: 400px;
+  }
+}
+
+.l-footer__nav-list {
+  width: 50%;
+}
+
+.l-footer__nav-item {
+  font-size: rem(13);
+
+  @include mq(lap) {
+    font-size: rem(13);
+  }
+
+  a {
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #c8c8c8;
+    }
+  }
+}
+.l-footer__nav-item + .l-footer__nav-item {
+  margin-top: rem(20);
+
+  @include mq(lap) {
+    margin-top: rem(20);
+  }
+}
+.l-footer__sns {
+  margin-top: rem(60);
+
+  @include mq(lap) {
+    display: none;
+  }
+  a {
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #c8c8c8;
+    }
+  }
+}
+
+.l-footer__sns-list {
+  display: flex;
+  align-items: center;
+  font-size: rem(15);
+  font-family: $en;
+}
+
+.l-footer__sns-item {
+  margin-right: rem(42);
+}
+
+.l-footer__copy {
+  opacity: 0.4;
+  font-size: rem(12);
+  margin-top: rem(23);
+
+  @include mq(lap) {
+    font-size: rem(12);
+    margin-top: rem(25);
+  }
+}
+
+.l-footer-simple {
+  padding-bottom: 50px;
+
+  @include mq(lap) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  .l-footer__copy {
+    text-align: center;
+    color: #333;
+    opacity: 1;
+  }
+}

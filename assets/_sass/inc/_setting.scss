@@ -1,0 +1,63 @@
+@charset 'UTF-8';
+
+// -----------------------------------
+//  Layout Settings
+//------------------------------------
+
+// Contentの幅
+$content-width: 1568px !default;
+
+// ブレークポイント
+$breakpoints: (
+  'sp': 375px,
+  'tab': 768px,
+  'lap': 1024px,
+  'desk': 1200px,
+  'vr': 1366px,
+  'wide': 1568px,
+  'full': 1700px,
+) !default;
+
+//====================================
+//  Color Setings
+//====================================
+
+// ベースカラー　背景色
+$base-color: #fff;
+
+// メインカラー
+$main-color: #76706a;
+
+//　アクセントカラー
+// $accent-color: #e50012;
+
+// テキストの色
+// $main-text-color: #524b3b;
+$main-text-color: #333;
+
+// その他の色
+// $secound-color: #fff;
+// $third-color: #666;
+
+//====================================
+//  Typeface
+//====================================
+
+// $font-set-primary: 'Shippori Mincho', serif;
+$font-set-primary: 'FOT-筑紫Aオールド明朝 Pr6 M', '游明朝体', 'Yu Mincho',
+  YuMincho, 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', 'MS P明朝', 'MS PMincho',
+  serif;
+$font-set-secondary: 'FOT-筑紫Aオールド明朝 Pr6 M', '游明朝体', 'Yu Mincho',
+  YuMincho, 'ヒラギノ明朝 Pro', 'Hiragino Mincho Pro', 'MS P明朝', 'MS PMincho',
+  serif;
+$en: 'Scheherazade', serif;
+
+//====================================
+//  hover
+//====================================
+
+$hover1: all 0.3s ease;
+$hover3: transform 0.8s cubic-bezier(0.09, 0.43, 0.1, 0.79);
+$hover-color1: $main-color;
+$hover-color2: #fff;
+$hover-scale: scale(1.08, 1.08);

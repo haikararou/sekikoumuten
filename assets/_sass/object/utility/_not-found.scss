@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+/*
+ not found
+-----------------------------------------------------*/
+.c-not-found__title {
+  font-family: $en;
+  font-size: rem(40);
+
+  @include mq(tab) {
+    font-size: rem(70);
+  }
+}
+
+.c-not-found__button {
+  margin-top: 30px;
+
+  a {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #333;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+}
